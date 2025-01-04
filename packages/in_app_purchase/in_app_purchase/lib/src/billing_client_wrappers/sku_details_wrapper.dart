@@ -140,7 +140,7 @@ class SkuDetailsWrapper {
 
   @override
   int get hashCode {
-    return hashValues(
+    return Object.hash(
         description.hashCode,
         freeTrialPeriod.hashCode,
         introductoryPrice.hashCode,
@@ -195,7 +195,7 @@ class SkuDetailsResponseWrapper {
   }
 
   @override
-  int get hashCode => hashValues(billingResult, skuDetailsList);
+  int get hashCode => Object.hash(billingResult, skuDetailsList);
 }
 
 /// Params containing the response code and the debug message from the Play Billing API response.
@@ -240,5 +240,5 @@ class BillingResultWrapper {
   }
 
   @override
-  int get hashCode => hashValues(responseCode, debugMessage);
+  int get hashCode => Object.hash(responseCode, debugMessage);
 }

@@ -184,7 +184,7 @@ class SKPaymentTransactionWrapper {
   }
 
   @override
-  int get hashCode => hashValues(
+  int get hashCode => Object.hash(
       this.payment,
       this.transactionState,
       this.originalTransaction,

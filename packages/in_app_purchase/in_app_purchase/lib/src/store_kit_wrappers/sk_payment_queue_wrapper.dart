@@ -264,7 +264,7 @@ class SKError {
   }
 
   @override
-  int get hashCode => hashValues(this.code, this.domain, this.userInfo);
+  int get hashCode => Object.hash(this.code, this.domain, this.userInfo);
 }
 
 /// Dart wrapper around StoreKit's
@@ -367,7 +367,7 @@ class SKPaymentWrapper {
   }
 
   @override
-  int get hashCode => hashValues(
+  int get hashCode => Object.hash(
       this.productIdentifier,
       this.applicationUsername,
       this.quantity,

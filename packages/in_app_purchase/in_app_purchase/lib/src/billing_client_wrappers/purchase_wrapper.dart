@@ -61,7 +61,7 @@ class PurchaseWrapper {
   }
 
   @override
-  int get hashCode => hashValues(
+  int get hashCode => Object.hash(
       orderId,
       packageName,
       purchaseTime,
@@ -210,7 +210,7 @@ class PurchaseHistoryRecordWrapper {
   }
 
   @override
-  int get hashCode => hashValues(purchaseTime, purchaseToken, signature, sku,
+  int get hashCode => Object.hash(purchaseTime, purchaseToken, signature, sku,
       originalJson, developerPayload);
 }
 
@@ -245,7 +245,7 @@ class PurchasesResultWrapper {
   }
 
   @override
-  int get hashCode => hashValues(billingResult, responseCode, purchasesList);
+  int get hashCode => Object.hash(billingResult, responseCode, purchasesList);
 
   /// The detailed description of the status of the operation.
   final BillingResultWrapper billingResult;
@@ -288,7 +288,7 @@ class PurchasesHistoryResult {
   }
 
   @override
-  int get hashCode => hashValues(billingResult, purchaseHistoryRecordList);
+  int get hashCode => Object.hash(billingResult, purchaseHistoryRecordList);
 
   /// The detailed description of the status of the [BillingClient.queryPurchaseHistory].
   final BillingResultWrapper billingResult;
