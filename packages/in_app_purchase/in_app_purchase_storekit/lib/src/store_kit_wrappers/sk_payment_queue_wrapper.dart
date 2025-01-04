@@ -360,7 +360,7 @@ class SKError {
   }
 
   @override
-  int get hashCode => hashValues(
+  int get hashCode => Object.hash(
         code,
         domain,
         userInfo,
