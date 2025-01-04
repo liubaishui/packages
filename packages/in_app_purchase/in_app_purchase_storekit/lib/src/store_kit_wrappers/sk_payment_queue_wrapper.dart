@@ -477,7 +477,7 @@ class SKPaymentWrapper {
   }
 
   @override
-  int get hashCode => hashValues(productIdentifier, applicationUsername,
+  int get hashCode => Object.hash(productIdentifier, applicationUsername,
       quantity, simulatesAskToBuyInSandbox, requestData);
 
   @override
@@ -581,5 +581,5 @@ class SKPaymentDiscountWrapper {
 
   @override
   int get hashCode =>
-      hashValues(identifier, keyIdentifier, nonce, signature, timestamp);
+      Object.hash(identifier, keyIdentifier, nonce, signature, timestamp);
 }

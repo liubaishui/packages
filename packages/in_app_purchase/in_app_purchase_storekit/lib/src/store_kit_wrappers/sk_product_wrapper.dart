@@ -60,7 +60,8 @@ class SkProductResponseWrapper {
   }
 
   @override
-  int get hashCode => hashValues(this.products, this.invalidProductIdentifiers);
+  int get hashCode =>
+      Object.hash(this.products, this.invalidProductIdentifiers);
 }
 
 /// Dart wrapper around StoreKit's [SKProductPeriodUnit](https://developer.apple.com/documentation/storekit/skproductperiodunit?language=objc).
@@ -134,7 +135,7 @@ class SKProductSubscriptionPeriodWrapper {
   }
 
   @override
-  int get hashCode => hashValues(this.numberOfUnits, this.unit);
+  int get hashCode => Object.hash(this.numberOfUnits, this.unit);
 }
 
 /// Dart wrapper around StoreKit's [SKProductDiscountPaymentMode](https://developer.apple.com/documentation/storekit/skproductdiscountpaymentmode?language=objc).
@@ -221,7 +222,7 @@ class SKProductDiscountWrapper {
   }
 
   @override
-  int get hashCode => hashValues(this.price, this.priceLocale,
+  int get hashCode => Object.hash(this.price, this.priceLocale,
       this.numberOfPeriods, this.paymentMode, this.subscriptionPeriod);
 }
 
@@ -327,7 +328,7 @@ class SKProductWrapper {
   }
 
   @override
-  int get hashCode => hashValues(
+  int get hashCode => Object.hash(
       this.productIdentifier,
       this.localizedTitle,
       this.localizedDescription,
@@ -391,5 +392,5 @@ class SKPriceLocaleWrapper {
   }
 
   @override
-  int get hashCode => hashValues(this.currencySymbol, this.currencyCode);
+  int get hashCode => Object.hash(this.currencySymbol, this.currencyCode);
 }

@@ -51,7 +51,7 @@ class SKStorefrontWrapper {
   }
 
   @override
-  int get hashCode => hashValues(
+  int get hashCode => Object.hash(
         this.countryCode,
         this.identifier,
       );
